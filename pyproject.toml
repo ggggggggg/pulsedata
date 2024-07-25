@@ -15,6 +15,16 @@ dev = [
     "bump2version"
 ]
 
+[tool.setuptools.package-dir]
+pulsedata = "pulsedata"
+
 [build-system]
 build-backend = "flit_core.buildapi"
 requires = ["flit_core >=3.2,<4"]
+
+[tool.setuptools.package-data]
+include = [
+    "20230626/0000/*",
+    "20230626/0001/*",
+    "ebit_20240722_0006"
+]
