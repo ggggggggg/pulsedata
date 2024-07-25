@@ -1,0 +1,20 @@
+[project]
+name = "pulsedata"
+description = "tes pulse data for testing"
+version = "0.1.0"
+authors = [
+    { name = "S", email = "s@fake.com" }
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "tox",
+    "pre-commit",
+    "bump2version"
+]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
