@@ -11,3 +11,4 @@ def test_data_is_there():
 
 def test_can_open_files():
     open(pulsedata.off["ebit_20240722_0006"]/"20240722_run0006_chan1.off","rb")
+    open(pulsedata.off["ebit_20240723_0000"]/"20240723_run0000_chan1.off","rb")
