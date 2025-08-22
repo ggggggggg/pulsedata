@@ -5,29 +5,15 @@ version = "0.1.0"
 authors = [
     { name = "S", email = "s@fake.com" }
 ]
-dependencies = [
-]
+dependencies = []
 
 [project.optional-dependencies]
 dev = [
     "tox",
-    "pre-commit",
+    "pre-commit", 
     "bump2version"
 ]
 
 [build-system]
-requires = ["setuptools>=64", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["pulsedata*"]
-
-[tool.setuptools.package-data]
-pulsedata = [
-    "20230626/0000/*",
-    "20230626/0001/*",
-    "ebit_20240722_0006/*",
-    "bessy_20240727/*",
-    "truebq_202508/*"
-]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
