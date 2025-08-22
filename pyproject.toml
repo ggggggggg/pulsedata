@@ -19,12 +19,14 @@ dev = [
 pulsedata = "pulsedata"
 
 [build-system]
-build-backend = "flit_core.buildapi"
-requires = ["flit_core >=3.2,<4"]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.setuptools.package-data]
 include = [
     "20230626/0000/*",
     "20230626/0001/*",
-    "ebit_20240722_0006"
+    "ebit_20240722_0006",
+    "bessy_20240727",
+    "truebq_202508"
 ]

@@ -9,6 +9,11 @@ def test_data_is_there():
         assert v.noise_folder.is_dir()
 
 
-def test_can_open_files():
+def test_can_open_files_off():
     open(pulsedata.off["ebit_20240722_0006"]/"20240722_run0006_chan1.off","rb")
     open(pulsedata.off["ebit_20240723_0000"]/"20240723_run0000_chan1.off","rb")
+
+def test_can_open_files_loop_parquet():
+    for k,v in pulsedata.parquet.items():
+        with open(v, "rb") as _:
+            pass
