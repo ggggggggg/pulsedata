@@ -11,7 +11,8 @@ class PulseNoisePair:
     noise_folder: Path
 
 pulse_noise_ljh_pairs: Dict[str, PulseNoisePair] = {"20230626": PulseNoisePair(root/"20230626"/"0001",root/"20230626"/"0000"),
-                         "bessy_20240727": PulseNoisePair(root/"bessy_20240727"/"0002",root/"bessy_20240727"/"0000")} 
+                         "bessy_20240727": PulseNoisePair(root/"bessy_20240727"/"0002",root/"bessy_20240727"/"0000"),
+                         "gamma_20241005": PulseNoisePair(root/"20241005"/"0001",root/"20241005"/"0000")} 
 off: Dict[str, Path] = {"ebit_20240722_0006": root/"ebit_20240722_0006",
        "ebit_20240723_0000": root/"ebit_20240723_0000"}
 
