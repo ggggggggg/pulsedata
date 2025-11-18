@@ -8,6 +8,10 @@ def test_data_is_there():
         assert v.pulse_folder.is_dir()
         assert v.noise_folder.is_dir()
 
+    for k,v in pulsedata.numpy.items():
+        assert v.pulse.is_file()
+        assert v.noise.is_file()
+
 
 def test_can_open_files_off():
     open(pulsedata.off["ebit_20240722_0006"]/"20240722_run0006_chan1.off","rb")
