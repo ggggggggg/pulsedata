@@ -1,1 +1,1 @@
-from .api import pulse_noise_ljh_pairs, off, parquet, numpy
+from .api import pulse_noise_ljh_pairs, off, parquet, numpy  # noqa: F401
