@@ -10,6 +10,7 @@ class PulseNoisePair:
     pulse_folder: Path
     noise_folder: Path
 
+
 @dataclass(frozen=True)
 class PulseNoiseNpyPair:
     pulse: Path
@@ -20,6 +21,7 @@ pulse_noise_ljh_pairs: Dict[str, PulseNoisePair] = {
     "20230626": PulseNoisePair(root/"20230626"/"0001", root/"20230626"/"0000"),
     "bessy_20240727": PulseNoisePair(root/"bessy_20240727"/"0002", root/"bessy_20240727"/"0000"),
     "gamma_20241005": PulseNoisePair(root/"20241005"/"0001", root/"20241005"/"0000"),
+    "heates20240212": PulseNoisePair(root/"20240212"/"0019", root/"20240212"/"0017"),
     "regression": PulseNoisePair(root/"regression_tests"/"0001", root/"regression_tests"/"0000"),
 }
 off: Dict[str, Path] = {
@@ -34,6 +36,7 @@ parquet: Dict[str, Path] = {
 }
 
 numpy: Dict[str, PulseNoiseNpyPair] = {
-    "noise_limited_optical_tes": PulseNoiseNpyPair(root/"noise_limited_optical_tes_20251118_from_leaf"/"Ch3_60mV_50mK_46dB_pulses_SRS.npy",
-                                                root/"noise_limited_optical_tes_20251118_from_leaf"/"Ch3_60mV_50mK_46dB_noise_SRS.npy")
+    "noise_limited_optical_tes": PulseNoiseNpyPair(
+        root/"noise_limited_optical_tes_20251118_from_leaf"/"Ch3_60mV_50mK_46dB_pulses_SRS.npy",
+        root/"noise_limited_optical_tes_20251118_from_leaf"/"Ch3_60mV_50mK_46dB_noise_SRS.npy")
 }
